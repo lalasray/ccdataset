@@ -18,7 +18,7 @@ def argument_parser():
     return vars(ap.parse_args())
 
 def generate_checkerboard(rows_num, columns_num, block_size, output_name, output_path):
-    block_size = block_size * 4
+    block_size = block_size
     image_width = block_size * columns_num
     image_height = block_size * rows_num
     checker_board = np.zeros((image_height, image_width, 3), np.uint8)
