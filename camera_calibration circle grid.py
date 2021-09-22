@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
--
-# In[2]:
 
 
 import numpy as np
@@ -11,7 +7,6 @@ import glob
 import matplotlib.pyplot as plt
 
 
-# In[3]:
 
 
 # termination criteria
@@ -106,7 +101,6 @@ objpoints = [] # 3d point in real world space
 imgpoints = [] # 2d points in image plane.
 
 
-# In[ ]:
 
 
 
@@ -142,7 +136,6 @@ cv2.destroyAllWindows()
 ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, gray.shape[::-1], None, None)
 
 
-# In[ ]:
 
 
 # It's very important to transform the matrix to list.
@@ -151,7 +144,6 @@ with open("calibration.yaml", "w") as f:
     yaml.dump(data, f)
 
 
-# In[ ]:
 
 
 with open('calibration.yaml') as f:

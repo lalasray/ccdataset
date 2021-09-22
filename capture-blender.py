@@ -63,12 +63,12 @@ bpy.data.objects["Plane"].rotation_euler[1] = 3.14 / 2
 
 
 #create a spiral path for the camera to move on and put it in the scene as per reqiuremnts 
-bpy.ops.curve.spirals(spiral_type="ARCH", turns=4, dif_radius=0.5, dif_z=0.4, radius=0.15)
+bpy.ops.curve.spirals(spiral_type="ARCH", turns=4, dif_radius=0.5, dif_z=0.65, radius=0.15)
 bpy.data.objects["Spiral"].rotation_euler[0] = 3*(3.14 / 2)
 bpy.data.objects["Spiral"].rotation_euler[2] = 3.14 / 2
-bpy.data.objects["Spiral"].scale[0] = 2
-bpy.data.objects["Spiral"].scale[1] = 2
-bpy.data.objects["Spiral"].scale[2] = 2
+bpy.data.objects["Spiral"].scale[0] = 0.8
+bpy.data.objects["Spiral"].scale[1] = 0.8
+bpy.data.objects["Spiral"].scale[2] = 0.8
 
 
 
@@ -114,56 +114,101 @@ if con:
 bpy.context.scene.objects["LF0"].select_set(False)
 bpy.context.scene.objects["LF0_Cam000"].select_set(True)
 bpy.context.view_layer.objects.active = bpy.context.scene.objects["LF0_Cam000"]
+bpy.data.objects["LF0_Cam000"].rotation_euler[2] = 0
+bpy.data.objects["LF0_Cam000"].keyframe_insert('rotation_euler',frame=0)
+bpy.data.objects["LF0_Cam000"].rotation_euler[2] = 6.28
+bpy.data.objects["LF0_Cam000"].keyframe_insert('rotation_euler',frame=280)
 bpy.ops.object.constraint_add(type='TRACK_TO')
 bpy.context.object.constraints["Track To"].target = bpy.data.objects["Plane"]
 bpy.context.object.constraints["Track To"].target = bpy.data.objects["Plane"]
+bpy.context.object.constraints["Track To"].influence = 0.6
 bpy.context.scene.objects["LF0_Cam000"].select_set(False)
 bpy.context.scene.objects["LF0_Cam001"].select_set(True)
 bpy.context.view_layer.objects.active = bpy.context.scene.objects["LF0_Cam001"]
+bpy.data.objects["LF0_Cam001"].rotation_euler[2] = 0
+bpy.data.objects["LF0_Cam001"].keyframe_insert('rotation_euler',frame=0)
+bpy.data.objects["LF0_Cam001"].rotation_euler[2] = 6.28
+bpy.data.objects["LF0_Cam001"].keyframe_insert('rotation_euler',frame=280)
 bpy.ops.object.constraint_add(type='TRACK_TO')
 bpy.context.object.constraints["Track To"].target = bpy.data.objects["Plane"]
 bpy.context.object.constraints["Track To"].target = bpy.data.objects["Plane"]
+bpy.context.object.constraints["Track To"].influence = 0.6
 bpy.context.scene.objects["LF0_Cam001"].select_set(False)
 bpy.context.scene.objects["LF0_Cam002"].select_set(True)
 bpy.context.view_layer.objects.active = bpy.context.scene.objects["LF0_Cam002"]
+bpy.data.objects["LF0_Cam002"].rotation_euler[2] = 0
+bpy.data.objects["LF0_Cam002"].keyframe_insert('rotation_euler',frame=0)
+bpy.data.objects["LF0_Cam002"].rotation_euler[2] = 6.28
+bpy.data.objects["LF0_Cam002"].keyframe_insert('rotation_euler',frame=280)
 bpy.ops.object.constraint_add(type='TRACK_TO')
 bpy.context.object.constraints["Track To"].target = bpy.data.objects["Plane"]
 bpy.context.object.constraints["Track To"].target = bpy.data.objects["Plane"]
+bpy.context.object.constraints["Track To"].influence = 0.6
 bpy.context.scene.objects["LF0_Cam002"].select_set(False)
 bpy.context.scene.objects["LF0_Cam003"].select_set(True)
 bpy.context.view_layer.objects.active = bpy.context.scene.objects["LF0_Cam003"]
+bpy.data.objects["LF0_Cam003"].rotation_euler[2] = 0
+bpy.data.objects["LF0_Cam003"].keyframe_insert('rotation_euler',frame=0)
+bpy.data.objects["LF0_Cam003"].rotation_euler[2] = 6.28
+bpy.data.objects["LF0_Cam003"].keyframe_insert('rotation_euler',frame=280)
 bpy.ops.object.constraint_add(type='TRACK_TO')
 bpy.context.object.constraints["Track To"].target = bpy.data.objects["Plane"]
 bpy.context.object.constraints["Track To"].target = bpy.data.objects["Plane"]
+bpy.context.object.constraints["Track To"].influence = 0.6
 bpy.context.scene.objects["LF0_Cam003"].select_set(False)
 bpy.context.scene.objects["LF0_Cam004"].select_set(True)
 bpy.context.view_layer.objects.active = bpy.context.scene.objects["LF0_Cam004"]
+bpy.data.objects["LF0_Cam004"].rotation_euler[2] = 0
+bpy.data.objects["LF0_Cam004"].keyframe_insert('rotation_euler',frame=0)
+bpy.data.objects["LF0_Cam004"].rotation_euler[2] = 6.28
+bpy.data.objects["LF0_Cam004"].keyframe_insert('rotation_euler',frame=280)
 bpy.ops.object.constraint_add(type='TRACK_TO')
 bpy.context.object.constraints["Track To"].target = bpy.data.objects["Plane"]
 bpy.context.object.constraints["Track To"].target = bpy.data.objects["Plane"]
+bpy.context.object.constraints["Track To"].influence = 0.6
 bpy.context.scene.objects["LF0_Cam004"].select_set(False)
 bpy.context.scene.objects["LF0_Cam005"].select_set(True)
 bpy.context.view_layer.objects.active = bpy.context.scene.objects["LF0_Cam005"]
+bpy.data.objects["LF0_Cam005"].rotation_euler[2] = 0
+bpy.data.objects["LF0_Cam005"].keyframe_insert('rotation_euler',frame=0)
+bpy.data.objects["LF0_Cam005"].rotation_euler[2] = 6.28
+bpy.data.objects["LF0_Cam005"].keyframe_insert('rotation_euler',frame=280)
 bpy.ops.object.constraint_add(type='TRACK_TO')
 bpy.context.object.constraints["Track To"].target = bpy.data.objects["Plane"]
 bpy.context.object.constraints["Track To"].target = bpy.data.objects["Plane"]
+bpy.context.object.constraints["Track To"].influence = 0.6
 bpy.context.scene.objects["LF0_Cam005"].select_set(False)
 bpy.context.scene.objects["LF0_Cam006"].select_set(True)
 bpy.context.view_layer.objects.active = bpy.context.scene.objects["LF0_Cam006"]
+bpy.data.objects["LF0_Cam006"].rotation_euler[2] = 0
+bpy.data.objects["LF0_Cam006"].keyframe_insert('rotation_euler',frame=0)
+bpy.data.objects["LF0_Cam006"].rotation_euler[2] = 6.28
+bpy.data.objects["LF0_Cam006"].keyframe_insert('rotation_euler',frame=280)
 bpy.ops.object.constraint_add(type='TRACK_TO')
 bpy.context.object.constraints["Track To"].target = bpy.data.objects["Plane"]
 bpy.context.object.constraints["Track To"].target = bpy.data.objects["Plane"]
+bpy.context.object.constraints["Track To"].influence = 0.6
 bpy.context.scene.objects["LF0_Cam006"].select_set(False)
 bpy.context.scene.objects["LF0_Cam007"].select_set(True)
 bpy.context.view_layer.objects.active = bpy.context.scene.objects["LF0_Cam007"]
+bpy.data.objects["LF0_Cam007"].rotation_euler[2] = 0
+bpy.data.objects["LF0_Cam007"].keyframe_insert('rotation_euler',frame=0)
+bpy.data.objects["LF0_Cam007"].rotation_euler[2] = 6.28
+bpy.data.objects["LF0_Cam007"].keyframe_insert('rotation_euler',frame=280)
 bpy.ops.object.constraint_add(type='TRACK_TO')
 bpy.context.object.constraints["Track To"].target = bpy.data.objects["Plane"]
 bpy.context.object.constraints["Track To"].target = bpy.data.objects["Plane"]
+bpy.context.object.constraints["Track To"].influence = 0.6
 bpy.context.scene.objects["LF0_Cam007"].select_set(False)
 bpy.context.scene.objects["LF0_Cam008"].select_set(True)
 bpy.context.view_layer.objects.active = bpy.context.scene.objects["LF0_Cam008"]
+bpy.data.objects["LF0_Cam008"].rotation_euler[2] = 0
+bpy.data.objects["LF0_Cam008"].keyframe_insert('rotation_euler',frame=0)
+bpy.data.objects["LF0_Cam008"].rotation_euler[2] = 6.28
+bpy.data.objects["LF0_Cam008"].keyframe_insert('rotation_euler',frame=280)
 bpy.ops.object.constraint_add(type='TRACK_TO')
 bpy.context.object.constraints["Track To"].target = bpy.data.objects["Plane"]
+bpy.context.object.constraints["Track To"].influence = 0.6
 bpy.context.scene.objects["LF0_Cam008"].select_set(False)
 
 
@@ -173,19 +218,17 @@ bpy.context.scene.objects["LF0_Cam008"].select_set(False)
 #------------------------------------------------------------------------------------------------------------------------------------------------
 #Capturing the scene
 #------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 for i in range(0,251,2):
     bpyscene.frame_set(i)
     #update the objects for each selected frame (in our case in every 2 frames)
     bpy.context.view_layer.update() 
     for filename in os.listdir(directory):
-    	#take all the texture from the texture directory and capture it one after another
+        #take all the texture from the texture directory and capture it one after another
         if filename.endswith(".png"):
             bpy.data.images['texture.png'].filepath = directory + filename
             for ob in bpy.context.scene.objects:
                 if ob.type == 'CAMERA':
-                	#for a perticular frame select all cameras and capture that scene using all those cameras
+                    #for a perticular frame select all cameras and capture that scene using all those cameras
                     bpy.context.scene.camera = ob
                     print('Set camera %s' % ob.name)
                     #save the capture with frame no and camera name included in it
@@ -193,7 +236,6 @@ for i in range(0,251,2):
                                         filename + 'frame_' + str(bpyscene.frame_current) + 'camera_' + ob.name)
                     bpy.context.scene.render.filepath = file
                     bpy.ops.render.render(write_still=True)
-
 
 #------------------------------------------------------------------------------------------------------------------------------------------------
 #Creating the txt file with position & orientation data

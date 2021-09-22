@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[21]:
-
-
 import cv2
 import numpy as np
 import glob
@@ -66,8 +60,6 @@ print("tvecs : \n")
 print(tvecs)
 
 
-# In[6]:
-
 
 dst = cv2.undistort(img, mtx, dist, None, mtx)
 cv2.imwrite('calibration_wide/test_undist.png',dst)
@@ -86,8 +78,6 @@ ax2.imshow(dst)
 ax2.set_title('Undistorted Image', fontsize=30)
 
 
-# In[7]:
-
 
 mean_error = 0
 for i in range(len(objpoints)):
@@ -97,7 +87,6 @@ for i in range(len(objpoints)):
 print( "total error: {}".format(mean_error/len(objpoints)) )
 
 
-# In[ ]:
 
 
 
